@@ -13,6 +13,6 @@ public:
 	bool GetGameOver() { return mGameOver; }
 private:
 	void toggleSquare();
-	shared_ptr<class Board> mBoards[2];
+	pair<shared_ptr<class Board>, shared_ptr<class Board>> mBoards;
 	bool mGameOver;
 };

@@ -37,3 +37,8 @@ void Board::Display()
 		cout << endl;
 	}
 }
+
+void Board::ToggleSquare(int row, int col)
+{
+	mSquares.at(row).at(col)->Toggle();
+}

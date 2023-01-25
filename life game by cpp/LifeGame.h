@@ -12,7 +12,7 @@ public:
 	void Output();
 	bool GetGameOver() { return mGameOver; }
 private:
+	void toggleSquare();
 	shared_ptr<class Board> mBoards[2];
-	int mCurrentBoard;
 	bool mGameOver;
 };

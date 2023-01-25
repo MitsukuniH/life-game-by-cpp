@@ -5,7 +5,7 @@
 
 using namespace std;
 
-LifeGame::LifeGame() : mCurrentBoard(0), mGameOver(false)
+LifeGame::LifeGame() : mGameOver(false)
 {
 	for (auto& board : mBoards)
 	{
@@ -29,6 +29,7 @@ void LifeGame::Input()
 			end = true;
 			break;
 		case 't':
+			toggleSquare();
 			break;
 		case 'q':
 			end = true;
@@ -41,6 +42,15 @@ void LifeGame::Input()
 	}
 }
 
+void LifeGame::toggleSquare()
+{
+	int row, col;
+	cout << "row col >> ";
+	cin >> row >> col;
+	mBoards[0]->ToggleSquare(row, col);
+	mBoards[1]->ToggleSquare(row, col);
+}
+
 void LifeGame::Prosses()
 {
 
@@ -48,5 +58,5 @@ void LifeGame::Prosses()
 
 void LifeGame::Output()
 {
-	mBoards[mCurrentBoard]->Display();
+	mBoards[0]->Display();
 }

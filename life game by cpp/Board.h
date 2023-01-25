@@ -10,6 +10,7 @@ public:
 	Board();
 	void Display();
 	void Prosses();
+	void ToggleSquare(int, int);
 	int GetRow() { return mRow; }
 	int GetCol() { return mCol; }
 private:

@@ -11,9 +11,9 @@ int main()
 	LifeGame lg;
 	while (!lg.GetGameOver())
 	{
+		lg.Output();
 		lg.Input();
 		lg.Prosses();
-		lg.Output();
 	}
 	return 0;
 }
